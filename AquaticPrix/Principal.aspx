@@ -82,7 +82,7 @@
             </nav>
             <!-- .nav-menu -->
 
-            <a href="#about" class="get-started-btn scrollto">Get Started</a>
+
 
         </div>
     </header>
@@ -247,7 +247,7 @@
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
-                    <h2>Team</h2>
+                    <h2>Equipo</h2>
                     <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
                 </div>
 
@@ -256,12 +256,12 @@
                     <div class="col-lg-6">
                         <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
                             <div class="pic">
-                                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                                <img src="assets/img/team/Alan Maffey.jpeg" class="img-fluid" alt="">
                             </div>
                             <div class="member-info">
-                                <h4>Walter White</h4>
-                                <span>Chief Executive Officer</span>
-                                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                                <h4>Alan Maffey</h4>
+                                <span>Desarrollador Gamer</span>
+                                <p>Estudiante de la carrera de analista de sistemas con un IQ de 530,000</p>
                                 <div class="social">
                                     <a href=""><i class="ri-twitter-fill"></i></a>
                                     <a href=""><i class="ri-facebook-fill"></i></a>
@@ -275,11 +275,11 @@
                     <div class="col-lg-6 mt-4 mt-lg-0">
                         <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
                             <div class="pic">
-                                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                                <img src="assets/img/team/Marco Antonio Miranda.jpeg" class="img-fluid" alt="">
                             </div>
                             <div class="member-info">
-                                <h4>Sarah Jhonson</h4>
-                                <span>Product Manager</span>
+                                <h4>Marco Antonio Miranda</h4>
+                                <span>Analistas Desarrollador</span>
                                 <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
                                 <div class="social">
                                     <a href=""><i class="ri-twitter-fill"></i></a>
@@ -294,12 +294,12 @@
                     <div class="col-lg-6 mt-4">
                         <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
                             <div class="pic">
-                                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+                                <img src="assets/img/team/Luis Laneri.jpeg" class="img-fluid" alt="">
                             </div>
                             <div class="member-info">
-                                <h4>William Anderson</h4>
-                                <span>CTO</span>
-                                <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
+                                <h4>Luis Laneri</h4>
+                                <span>Analistas Desarrollador</span>
+                                <p>Estudiante en la carrera de analista de sistemas, aspirante a desarrollador de software</p>
                                 <div class="social">
                                     <a href=""><i class="ri-twitter-fill"></i></a>
                                     <a href=""><i class="ri-facebook-fill"></i></a>
@@ -313,12 +313,31 @@
                     <div class="col-lg-6 mt-4">
                         <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
                             <div class="pic">
-                                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+                                <img src="assets/img/team/mattb26.jpeg" class="img-fluid" alt="">
                             </div>
                             <div class="member-info">
-                                <h4>Amanda Jepson</h4>
-                                <span>Accountant</span>
-                                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
+                                <h4>Matias Ariel Benitez</h4>
+                                <span>Leader</span>
+                                <p>Estudiante de analista de sistemas con aspiraciones de programador de videojuegos</p>
+                                <div class="social">
+                                    <a href=""><i class="ri-twitter-fill"></i></a>
+                                    <a href=""><i class="ri-facebook-fill"></i></a>
+                                    <a href=""><i class="ri-instagram-fill"></i></a>
+                                    <a href=""><i class="ri-linkedin-box-fill"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mt-4">
+                        <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="500">
+                            <div class="pic">
+                                <img src="assets/img/team/Benedicto Paco.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="member-info">
+                                <h4>Benedicto Paco</h4>
+                                <span>Desarrollador Web</span>
+                                <p>Nuevos desafíos, cumpliendo mis objetivos y metas </p>
                                 <div class="social">
                                     <a href=""><i class="ri-twitter-fill"></i></a>
                                     <a href=""><i class="ri-facebook-fill"></i></a>

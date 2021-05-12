@@ -67,12 +67,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\img\team\Alan Maffey.jpeg" />
+    <Content Include="assets\img\team\Benedicto Paco.jpg" />
+    <Content Include="assets\img\team\Luis Laneri.jpeg" />
+    <Content Include="assets\img\team\Marco Antonio Miranda.jpeg" />
+    <Content Include="assets\img\team\mattb26.jpeg" />
     <Content Include="Global.asax" />
     <Content Include="Principal.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-     <Content Include="assets\css\style.css" />
+    <Content Include="assets\css\style.css" />
     <Content Include="assets\img\apple-touch-icon.png" />
     <Content Include="assets\img\clients\client-1.png" />
     <Content Include="assets\img\clients\client-2.png" />
@@ -141,7 +146,7 @@
     <Content Include="assets\vendor\venobox\venobox.js" />
     <Content Include="assets\vendor\venobox\venobox.min.css" />
     <Content Include="assets\vendor\venobox\venobox.min.js" />
-    <Content Include="assets\vendor\waypoints\jquery.waypoints.min.js" /> 
+    <Content Include="assets\vendor\waypoints\jquery.waypoints.min.js" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
