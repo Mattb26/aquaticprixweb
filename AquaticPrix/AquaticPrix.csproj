@@ -72,7 +72,9 @@
     <Content Include="assets\img\team\Luis Laneri.jpeg" />
     <Content Include="assets\img\team\Marco Antonio Miranda.jpeg" />
     <Content Include="assets\img\team\mattb26.jpeg" />
+    <Content Include="assets\js\Master.js" />
     <Content Include="Global.asax" />
+    <Content Include="Index.aspx" />
     <Content Include="Nuevo.aspx" />
     <Content Include="Principal.aspx" />
     <Content Include="Web.config" />
@@ -148,8 +150,17 @@
     <Content Include="assets\vendor\venobox\venobox.min.css" />
     <Content Include="assets\vendor\venobox\venobox.min.js" />
     <Content Include="assets\vendor\waypoints\jquery.waypoints.min.js" />
+    <Compile Include="Entidades\Persona.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="master.Master.cs">
       <DependentUpon>master.Master</DependentUpon>

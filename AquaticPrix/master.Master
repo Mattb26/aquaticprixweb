@@ -446,7 +446,7 @@
                     <p></p>
                 </div>
                 <div class="flex align-items-stretch">
-                    <form action="" method="post" role="form" runat="server">
+                    <form id="formAlta" class="formAlta" action="" method="post" role="form" >
                         <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label for="name">Nombre</label>
