@@ -439,14 +439,14 @@
         <!-- End Contact Section -->
 
         <!-- Registrar nuevo usuario -->
-        <section id="altas" class="nuevo">
+        <section id="altas" class="nuevo  section-bg">
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
                     <h2>Registrar</h2>
                     <p></p>
                 </div>
-                <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-                    <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <div class="flex align-items-stretch">
+                    <form action="" method="post" role="form" runat="server">
                         <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label for="name">Nombre</label>
@@ -477,15 +477,15 @@
                                 <div class="validate"></div>
                             </div>
                             <div class="form-group col-md-4">
-                                <label for="name">Fecha Nacimiento</label>
+                                <label for="name">Correo electrónico</label>
                                 <input type="email" class="form-control" name="txtCorreo" id="txttxtCorreo" data-rule="minlen:4" data-msg="Please enter a valid email" />
                                 <div class="validate"></div>
                             </div>
                         </div>
                             <div class="mb-3">
-                                <div class="loading">Loading</div>
+ <%--                               <div class="loading">Loading</div>
                                 <div class="error-message"></div>
-                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div>--%>
                             </div>
                         <div class="text-center">
                             <button type="submit">Enviar</button>
