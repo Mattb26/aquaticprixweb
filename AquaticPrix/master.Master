@@ -1,14 +1,19 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Principal.aspx.cs" Inherits="AquaticPrix.Principal" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.master.cs" Inherits="AquaticPrix.master" %>
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Aquatic-Prix</title>
+
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -35,6 +40,7 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
+
 <body>
 
     <!-- ======= Header ======= -->
@@ -74,7 +80,7 @@
                     <li class="drop-down"><a href="">Mi Cuenta</a>
                         <ul>
                             <li><a href="#">Iniciar sesión</a></li>
-                            <li><a href="<%=ResolveUrl("~/Nuevo.aspx")%>">Crear una cuenta gratuita</a></li>
+                            <li><a href="#altas">Crear una cuenta gratuita</a></li>
                         </ul>
                     </li>
 
@@ -361,7 +367,7 @@
 
                 <div class="section-title">
                     <h2>Contacto</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    <p>Ante cualquier duda nos puede enviar un correo electrónico .</p>
                 </div>
 
                 <div class="row">
@@ -392,7 +398,7 @@
                     </div>
 
                     <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                        <form method="post" role="form" class="php-email-form">
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="name">Nombre</label>
@@ -431,6 +437,64 @@
             </div>
         </section>
         <!-- End Contact Section -->
+
+        <!-- Registrar nuevo usuario -->
+        <section id="altas" class="nuevo">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Registrar</h2>
+                    <p></p>
+                </div>
+                <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+                    <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="name">Nombre</label>
+                                <input type="text" name="txtNombre" class="form-control" id="txtNombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                <div class="validate"></div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="name">Apellido</label>
+                                <input type="text" class="form-control" name="txtApellido" id="txtApellido" data-rule="minlen:4" data-msg="Please enter a valid email" />
+                                <div class="validate"></div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="name">Fecha Nacimiento</label>
+                                <input type="date" class="form-control" name="txtApellido" id="txtFechaNacimiento" data-rule="minlen:4" data-msg="Please enter a valid email" />
+                                <div class="validate"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="name">Usuario</label>
+                                <input type="text" name="txtUsuario" class="form-control" id="txtUsuario" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                <div class="validate"></div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="name">Clave</label>
+                                <input type="password" class="form-control" name="txtClave" id="txtClave" data-rule="minlen:4" data-msg="Please enter a valid email" />
+                                <div class="validate"></div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="name">Fecha Nacimiento</label>
+                                <input type="email" class="form-control" name="txtCorreo" id="txttxtCorreo" data-rule="minlen:4" data-msg="Please enter a valid email" />
+                                <div class="validate"></div>
+                            </div>
+                        </div>
+                            <div class="mb-3">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                            </div>
+                        <div class="text-center">
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
 
     </main><!-- End #main -->
 
@@ -538,7 +602,11 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
 </body>
-
 </html>
