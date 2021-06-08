@@ -402,23 +402,23 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="name">Nombre</label>
-                                    <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                    <input type="text" name="txtNombreContac" class="form-control" id="txtNombreContac" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                                     <div class="validate"></div>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="name">Correo-Electrónico</label>
-                                    <input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" />
+                                    <input type="email" class="form-control" name="txtemailContac" id="txtemailContac" data-rule="txtemailContac" data-msg="Please enter a valid email" />
                                     <div class="validate"></div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="name">Asunto</label>
-                                <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                <input type="text" class="form-control" name="txtAsuntoContac" id="txtAsuntoContac" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                                 <div class="validate"></div>
                             </div>
                             <div class="form-group">
                                 <label for="name">Mensaje</label>
-                                <textarea class="form-control" name="message" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
+                                <textarea class="form-control" name="txtMsjContac" rows="10" data-rule="required" data-msg="Please write something for us" id="txtMsjContac"></textarea>
                                 <div class="validate"></div>
                             </div>
                             <div class="mb-3">
@@ -427,7 +427,9 @@
                                 <div class="sent-message">Your message has been sent. Thank you!</div>
                             </div>
                             <div class="text-center">
-                                <button type="submit">Enviar</button>
+<%--                                <button type="submit" onclick="AgregarContacto()">Enviar</button>--%>
+                                <%--<input id="Button1" type="button" value="Enviar" onclick="AgregarContacto()" />--%>
+                                <input id="clickMe" type="button" value="clickme" onclick="AgregarContacto();" />
                             </div>
                         </form>
                     </div>
@@ -599,6 +601,8 @@
     <script src="assets/vendor/venobox/venobox.min.js"></script>
     <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
+
+    
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>

@@ -75,6 +75,7 @@
     <Content Include="assets\img\team\Luis Laneri.jpeg" />
     <Content Include="assets\img\team\Marco Antonio Miranda.jpeg" />
     <Content Include="assets\img\team\mattb26.jpeg" />
+    <Content Include="assets\js\Index.js" />
     <Content Include="assets\js\Master.js" />
     <Content Include="Global.asax" />
     <Content Include="Index.aspx" />
