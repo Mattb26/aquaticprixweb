@@ -103,7 +103,7 @@
                     <h1>Mejores soluciones</h1>
                     <h2>Somos un equipo de diseñadores talentosos que crean juegos con la última tecnología.</h2>
                     <div class="d-lg-flex">
-                        <a href="#about" class="btn-get-started scrollto">Get Started</a>
+                        <a href="#about" class="btn-get-started scrollto">Empezar</a>
                         <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true">Watch Video <i class="icofont-play-alt-2"></i></a>
                     </div>
                 </div>
@@ -159,7 +159,7 @@
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
-                    <h2>About Us</h2>
+                    <h2>Sobre Nosotros</h2>
                 </div>
 
                 <div class="row content">
@@ -376,20 +376,20 @@
                         <div class="info">
                             <div class="address">
                                 <i class="icofont-google-map"></i>
-                                <h4>localización:</h4>
-                                <p>A108 Adam Street, New York, NY 535022</p>
+                                <h4>Localización:</h4>
+                                <p>Av. Gral. Francisco Fernández de la Cruz 1500, Buenos Aires</p>
                             </div>
 
                             <div class="email">
                                 <i class="icofont-envelope"></i>
                                 <h4>Correo electrónico:</h4>
-                                <p>info@example.com</p>
+                                <p>info@aquatic-prix.com</p>
                             </div>
 
                             <div class="phone">
                                 <i class="icofont-phone"></i>
                                 <h4>llamada:</h4>
-                                <p>+1 5589 55488 55s</p>
+                                <p>5589-5488</p>
                             </div>
 
                             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border: 0; width: 100%; height: 290px;" allowfullscreen></iframe>
@@ -418,7 +418,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="name">Mensaje</label>
-                                <textarea class="form-control" name="txtMsjContac" rows="10" data-rule="required" data-msg="Please write something for us" id="txtMsjContac"></textarea>
+                                <textarea class="form-control" name="txtMsjContac" id="txtMsjContac" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
                                 <div class="validate"></div>
                             </div>
                             <div class="mb-3">
@@ -427,9 +427,9 @@
                                 <div class="sent-message">Your message has been sent. Thank you!</div>
                             </div>
                             <div class="text-center">
-<%--                                <button type="submit" onclick="AgregarContacto()">Enviar</button>--%>
+                                <button type="submit" onclick="AgregarContacto()">Enviar</button>
                                 <%--<input id="Button1" type="button" value="Enviar" onclick="AgregarContacto()" />--%>
-                                <input id="clickMe" type="button" value="clickme" onclick="AgregarContacto();" />
+                                <%--<input id="clickMe" type="button" value="clickme" onclick="AgregarContacto();" />--%>
                             </div>
                         </form>
                     </div>
@@ -448,7 +448,7 @@
                     <p></p>
                 </div>
                 <div class="flex align-items-stretch">
-                    <form id="formAlta" class="formAlta" action="" method="post" role="form" >
+                    <form id="formAlta" class="formAlta" action="" method="post" role="form">
                         <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label for="name">Nombre</label>
@@ -462,7 +462,7 @@
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="name">Fecha Nacimiento</label>
-                                <input type="date" class="form-control" name="txtApellido" id="txtFechaNacimiento" data-rule="minlen:4" data-msg="Please enter a valid email" />
+                                <input type="date" class="form-control" name="txtFechaNacimiento" id="txtFechaNacimiento" data-rule="minlen:4" data-msg="Please enter a valid email" />
                                 <div class="validate"></div>
                             </div>
                         </div>
@@ -484,11 +484,12 @@
                                 <div class="validate"></div>
                             </div>
                         </div>
-                            <div class="mb-3">
- <%--                               <div class="loading">Loading</div>
+                        <div class="mb-3">
+                            <%--                               <div class="loading">Loading</div>
                                 <div class="error-message"></div>
                                 <div class="sent-message">Your message has been sent. Thank you!</div>--%>
-                            </div>
+                            <button type="submit" onclick="AgregarUsuario()">Enviar</button>
+                        </div>
                         <div class="text-center">
                             <button type="submit">Enviar</button>
                         </div>
@@ -498,7 +499,8 @@
         </section>
 
 
-    </main><!-- End #main -->
+    </main>
+    <!-- End #main -->
 
     <!-- ======= Footer ======= -->
     <footer id="footer">
@@ -602,7 +604,7 @@
     <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
 
-    
+
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>

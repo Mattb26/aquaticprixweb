@@ -1,6 +1,6 @@
 ﻿namespace AquaticPrix.Entidades
 {
-    public class Usuario:Persona
+    public class Usuario
     {
         public string NombreUsuario { get; set; }
 

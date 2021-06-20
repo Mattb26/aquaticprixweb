@@ -1,35 +1,30 @@
-﻿using RestSharp;
+﻿using Newtonsoft.Json;
+using RestSharp;
 using System;
+using System.Configuration;
 using System.Net;
 
 namespace AquaticPrix.Services
 {
     public class Persona
     {
-        public bool Agregar(Entidades.Usuario usuario)
+        public bool Agregar(Entidades.PersonaUsuario usuario)
         {
             RestClient client;
             RestRequest request;
             IRestResponse queryResult;
-            string uriAPI = string.Empty;
-
 
             try
             {
-                //if (opcion == 1) uriAPI = ConfigurationManager.AppSettings["URI_LISTA_PROVEEDOR_BANCOS"];
-                //else if (opcion == 2) uriAPI = ConfigurationManager.AppSettings["URI_LISTA_PROVEEDOR_TELEFONO"];
-
-
-                client = new RestClient(uriAPI);
+                client = new RestClient(ConfigurationManager.AppSettings["URI_PERSONAS"]);
                 client.AddDefaultHeader("Content-Type", "application/json");
 
-                request = new RestRequest(Method.GET);
+                request = new RestRequest(Method.POST);
 
                 request.AddHeader("content-type", "application/json");
                 request.AddHeader("Accept", "application/json");
 
-                //if (opcion == 1) request.AddParameter("idProveedor", Id, ParameterType.UrlSegment);
-                //else if (opcion == 2) request.AddParameter("idProveedor", Id, ParameterType.UrlSegment);
+                request.AddParameter("application/json; charset=utf-8", JsonConvert.SerializeObject(usuario), ParameterType.RequestBody);
 
                 request.RequestFormat = DataFormat.Json;
 
@@ -37,7 +32,6 @@ namespace AquaticPrix.Services
 
                 if (queryResult.StatusCode == HttpStatusCode.OK)
                 {
-                    //return queryResult.Content;
                     return true;
                 }
                 else
@@ -54,5 +48,7 @@ namespace AquaticPrix.Services
                 throw;
             }
         }
+
+     
     }
 }

@@ -1,4 +1,5 @@
 ﻿using AquaticPrix.Entidades;
+using AquaticPrix.Negocio;
 using System;
 using System.Web.Services;
 
@@ -12,11 +13,26 @@ namespace AquaticPrix
         }
 
         [WebMethod]
-        public static bool Alta(Usuario usuario)
+        public static bool Alta(string nombre, string apellido, string fechaNacimiento, string nick, string clave, string correo)
         {
+            Entidades.PersonaUsuario usuario;
+            Negocio.Usuario user;
+
             try
             {
-                return true;
+                usuario = new Entidades.PersonaUsuario();
+
+                usuario.Nombre = nombre;
+                usuario.Apellido = apellido;
+                usuario.FechaNacimiento = Convert.ToDateTime(fechaNacimiento);
+                usuario.Usuario = new Entidades.Usuario();
+                usuario.Usuario.NombreUsuario = nick;
+                usuario.Usuario.Clave =  Seguridad.Encriptar(clave);
+                usuario.CorreoElectronico = correo;
+
+                user = new Negocio.Usuario();
+                return user.Agregar(usuario);
+
             }
             catch (Exception)
             {
@@ -26,13 +42,24 @@ namespace AquaticPrix
         }
 
         [WebMethod]
-        //public static bool AgregarContacto(Entidades.Contacto contacto)
-        public static bool AgregarContacto(string nombre, string correo, string asjunto, string msj)
+        public static bool AgregarContacto(string nombre, string correo, string asunto, string msj)
         {
+            Entidades.Contacto contac;
+            Negocio.Contacto contacto;
             try
             {
+                contac = new Entidades.Contacto
+                {
+                    Asunto = asunto,
+                    CorreoElectronico = correo,
+                    Mensaje = msj,
+                    Nombre = nombre
 
-                return true;
+                };
+
+                contacto = new Negocio.Contacto();
+                return contacto.Enviar(contac);
+
             }
             catch (Exception)
             {
@@ -40,5 +67,6 @@ namespace AquaticPrix
                 throw;
             }
         }
+
     }
 }

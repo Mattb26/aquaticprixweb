@@ -3,25 +3,14 @@
     var Nombre = $("input[ID$='txtNombreContac']").val();
     var CorreoElectronico = $("input[ID$='txtemailContac']").val();
     var Asunto = $("input[ID$='txtAsuntoContac']").val();
-    var Mensaje = $("input[ID$='txtMsjContac']").val();
-    console.log("ingreso");
-
-    //var Contacto = {
-    //   Nombre = $("input[ID$='txtNombreContac']").val(),
-    //   CorreoElectronico = $("input[ID$='txtemailContac']").val(),
-    //   Asunto = $("input[ID$='txtAsuntoContac']").val(),
-    //   Mensaje = $("input[ID$='txtMsjContac']").val()
-    //};
-    //string nombre, string correo, string asjunto, string msj
-
-    //console.log(Contacto);
+    var Mensaje = $("#txtMsjContac").val();
 
     try {
 
         $.ajax({
             type: "POST",
             url: 'Index.aspx/AgregarContacto',
-            data: JSON.stringify({ nombre: Nombre, correo: CorreoElectronico, asjunto: Asunto, msj:Mensaje}),
+            data: JSON.stringify({ nombre: Nombre, correo: CorreoElectronico, asunto: Asunto, msj:Mensaje}),
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             success: Estado,
@@ -48,6 +37,52 @@ function Estado(response) {
 
     if (response.d) {
       
+    }
+
+}
+
+
+function AgregarUsuario() {
+
+    try {
+/*        string nombre, string apellido, string fechaNacimiento, string nick, string clave, string corre*/
+        $.ajax({
+            type: "POST",
+            url: 'Index.aspx/Alta',
+            data: JSON.stringify({
+                nombre: $("input[ID$='txtNombre']").val(),
+                apellido: $("input[ID$='txtApellido']").val(),
+                fechaNacimiento: $("input[ID$='txtFechaNacimiento']").val(),
+                nick: $("input[ID$='txtUsuario']").val(),
+                clave: $("input[ID$='txtClave']").val(),
+                correo: $("input[ID$='txttxtCorreo']").val()
+            }),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: EstadoUsuario,
+            failure: function (response) {
+                alert(response);
+            },
+            error: function (response) {
+                alert(response);
+            }
+        });
+
+    } catch (e) {
+        console.log(e);
+        alert(e);
+    }
+
+
+    return false;
+}
+
+function EstadoUsuario(response) {
+
+
+
+    if (response.d) {
+
     }
 
 }

@@ -6,7 +6,7 @@ namespace AquaticPrix.Negocio
 {
     public class Seguridad
     {
-        public static string Encriptar(string cadena, string firma)
+        public static string Encriptar(string cadena, string firma= "AQUATIC-PRIX")
         {
 
             try
