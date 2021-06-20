@@ -402,23 +402,23 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="name">Nombre</label>
-                                    <input type="text" name="txtNombreContac" class="form-control" id="txtNombreContac" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                    <input type="text" name="txtNombreContac" class="form-control" id="txtNombreContac" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required />
                                     <div class="validate"></div>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="name">Correo-Electrónico</label>
-                                    <input type="email" class="form-control" name="txtemailContac" id="txtemailContac" data-rule="txtemailContac" data-msg="Please enter a valid email" />
+                                    <input type="email" class="form-control" name="txtemailContac" id="txtemailContac" data-rule="txtemailContac" data-msg="Please enter a valid email" required/>
                                     <div class="validate"></div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="name">Asunto</label>
-                                <input type="text" class="form-control" name="txtAsuntoContac" id="txtAsuntoContac" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                <input type="text" class="form-control" name="txtAsuntoContac" id="txtAsuntoContac" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required/>
                                 <div class="validate"></div>
                             </div>
                             <div class="form-group">
                                 <label for="name">Mensaje</label>
-                                <textarea class="form-control" name="txtMsjContac" id="txtMsjContac" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
+                                <textarea class="form-control" name="txtMsjContac" id="txtMsjContac" rows="10" data-rule="required" data-msg="Please write something for us"  required></textarea>
                                 <div class="validate"></div>
                             </div>
                             <div class="mb-3">
@@ -452,17 +452,17 @@
                         <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label for="name">Nombre</label>
-                                <input type="text" name="txtNombre" class="form-control" id="txtNombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                <input type="text" name="txtNombre" class="form-control" id="txtNombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars"  required/>
                                 <div class="validate"></div>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="name">Apellido</label>
-                                <input type="text" class="form-control" name="txtApellido" id="txtApellido" data-rule="minlen:4" data-msg="Please enter a valid email" />
+                                <input type="text" class="form-control" name="txtApellido" id="txtApellido" data-rule="minlen:4" data-msg="Please enter a valid email"  required/>
                                 <div class="validate"></div>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="name">Fecha Nacimiento</label>
-                                <input type="date" class="form-control" name="txtFechaNacimiento" id="txtFechaNacimiento" data-rule="minlen:4" data-msg="Please enter a valid email" />
+                                <input type="date" class="form-control" name="txtFechaNacimiento" id="txtFechaNacimiento" data-rule="minlen:4" data-msg="Please enter a valid email" required />
                                 <div class="validate"></div>
                             </div>
                         </div>
@@ -470,17 +470,17 @@
                         <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label for="name">Usuario</label>
-                                <input type="text" name="txtUsuario" class="form-control" id="txtUsuario" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                <input type="text" name="txtUsuario" class="form-control" id="txtUsuario" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required  />
                                 <div class="validate"></div>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="name">Clave</label>
-                                <input type="password" class="form-control" name="txtClave" id="txtClave" data-rule="minlen:4" data-msg="Please enter a valid email" />
+                                <input type="password" class="form-control" name="txtClave" id="txtClave" data-rule="minlen:4" data-msg="Please enter a valid email" required />
                                 <div class="validate"></div>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="name">Correo electrónico</label>
-                                <input type="email" class="form-control" name="txtCorreo" id="txttxtCorreo" data-rule="minlen:4" data-msg="Please enter a valid email" />
+                                <input type="email" class="form-control" name="txtCorreo" id="txttxtCorreo" data-rule="minlen:4" data-msg="Please enter a valid email" required />
                                 <div class="validate"></div>
                             </div>
                         </div>
