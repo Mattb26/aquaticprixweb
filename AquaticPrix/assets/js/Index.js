@@ -45,7 +45,6 @@ function Estado(response) {
 function AgregarUsuario() {
 
     try {
-/*        string nombre, string apellido, string fechaNacimiento, string nick, string clave, string corre*/
         $.ajax({
             type: "POST",
             url: 'Index.aspx/Alta',
