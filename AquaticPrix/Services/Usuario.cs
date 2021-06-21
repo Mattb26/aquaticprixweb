@@ -75,7 +75,6 @@ namespace AquaticPrix.Services
 
                 if (queryResult.StatusCode == HttpStatusCode.OK)
                 {
-                    //return queryResult.Content;
                     return false;
                 }
                 else if (queryResult.StatusCode == HttpStatusCode.BadRequest)
