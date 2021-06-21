@@ -19,5 +19,36 @@ namespace AquaticPrix.Negocio
                 throw;
             }
         }
+        public bool Verificar(string nick)
+        {
+            Services.Usuario usuario ;
+            try
+            {
+                usuario = new Services.Usuario();
+                return usuario.VerificarExisteUsuario(nick);
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public bool VerificarCorreo(string email)
+        {
+            Services.Usuario usuario;
+            try
+            {
+                usuario = new Services.Usuario();
+                return usuario.VerificarExisteCuenta(email);
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

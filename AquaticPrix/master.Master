@@ -470,7 +470,7 @@
                         <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label for="name">Usuario</label>
-                                <input type="text" name="txtUsuario" class="form-control" id="txtUsuario" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required  />
+                                <input type="text" name="txtUsuario" class="form-control" id="txtUsuario" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required onblur="VerificarUsuario()" />
                                 <div class="validate"></div>
                             </div>
                             <div class="form-group col-md-4">
@@ -480,7 +480,7 @@
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="name">Correo electrónico</label>
-                                <input type="email" class="form-control" name="txtCorreo" id="txttxtCorreo" data-rule="minlen:4" data-msg="Please enter a valid email" required />
+                                <input type="email" class="form-control" name="txtCorreo" id="txttxtCorreo" data-rule="minlen:4" data-msg="Please enter a valid email" required  onblur="VerificarCorreo()"/>
                                 <div class="validate"></div>
                             </div>
                         </div>

@@ -68,5 +68,40 @@ namespace AquaticPrix
             }
         }
 
+        [WebMethod]
+        public static bool VerificarUsuario(string usuario)
+        {
+            Negocio.Usuario nick;
+            try
+            {
+                nick = new Negocio.Usuario();
+                return nick.Verificar(usuario);
+
+                
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        [WebMethod]
+        public static bool VerificarCorreoElectronico(string mail)
+        {
+            Negocio.Usuario correo;
+            try
+            {
+                correo = new Negocio.Usuario();
+                return correo.VerificarCorreo(mail);
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

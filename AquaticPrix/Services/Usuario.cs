@@ -67,7 +67,7 @@ namespace AquaticPrix.Services
                 request.AddHeader("content-type", "application/json");
                 request.AddHeader("Accept", "application/json");
 
-                request.AddParameter("usuario", usuario, ParameterType.UrlSegment);
+                request.AddParameter("usuario", usuario, ParameterType.QueryString);
 
                 request.RequestFormat = DataFormat.Json;
 
@@ -76,12 +76,17 @@ namespace AquaticPrix.Services
                 if (queryResult.StatusCode == HttpStatusCode.OK)
                 {
                     //return queryResult.Content;
-                    return true;
-                }
-                else
-                {
                     return false;
+                }
+                else if (queryResult.StatusCode == HttpStatusCode.BadRequest)
+                {
 
+                    return true;
+
+                }else
+                {
+
+                    return true;
                 }
 
 
@@ -117,7 +122,7 @@ namespace AquaticPrix.Services
                 request.AddHeader("content-type", "application/json");
                 request.AddHeader("Accept", "application/json");
 
-                request.AddParameter("mail", correoElectronico, ParameterType.UrlSegment);
+                request.AddParameter("mail", correoElectronico, ParameterType.QueryString);
 
                 request.RequestFormat = DataFormat.Json;
 
@@ -125,13 +130,16 @@ namespace AquaticPrix.Services
 
                 if (queryResult.StatusCode == HttpStatusCode.OK)
                 {
-                    //return queryResult.Content;
-                    return true;
+                    return false;
+                }
+                else if (queryResult.StatusCode == HttpStatusCode.BadRequest)
+                {
+                    return false;
+
                 }
                 else
                 {
                     return false;
-
                 }
 
 
