@@ -50,5 +50,21 @@ namespace AquaticPrix.Negocio
                 throw;
             }
         }
+
+        public Entidades.PersonaUsuario Login(Entidades.Usuario usuario)
+        {
+            Services.Usuario usuarioLogin;
+            try
+            {
+                usuarioLogin = new Services.Usuario();
+                return usuarioLogin.Login(usuario);
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

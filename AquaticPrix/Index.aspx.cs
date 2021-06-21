@@ -1,6 +1,8 @@
 ﻿using AquaticPrix.Entidades;
 using AquaticPrix.Negocio;
 using System;
+using System.IO;
+using System.Net;
 using System.Web.Services;
 
 namespace AquaticPrix
@@ -102,6 +104,16 @@ namespace AquaticPrix
 
                 throw;
             }
+        }
+
+        [WebMethod]
+        public void DescargarJuego()
+        {
+            WebClient myWebClient = new WebClient();
+            string destino = Path.Combine("c:\\nombrecarpeta", "datos.xls");
+            string url = "http://sitioweb/contenido/datos.xls";
+
+            myWebClient.DownloadFile(url, destino);
         }
     }
 }

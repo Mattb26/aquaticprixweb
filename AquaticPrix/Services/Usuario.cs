@@ -156,5 +156,48 @@ namespace AquaticPrix.Services
                 queryResult = null;
             }
         }
+
+        public Entidades.PersonaUsuario Login(Entidades.Usuario usuario)
+        {
+            RestClient client;
+            RestRequest request;
+            IRestResponse queryResult;
+
+            try
+            {
+
+                client = new RestClient(ConfigurationManager.AppSettings["URI_LOGINUSUARIO"]);
+                client.AddDefaultHeader("Content-Type", "application/json");
+
+                request = new RestRequest(Method.POST);
+
+                request.AddHeader("content-type", "application/json");
+                request.AddHeader("Accept", "application/json");
+
+                request.AddParameter("application/json; charset=utf-8", JsonConvert.SerializeObject(usuario), ParameterType.RequestBody);
+
+                request.RequestFormat = DataFormat.Json;
+
+                queryResult = client.Execute(request);
+
+                if (queryResult.StatusCode == HttpStatusCode.OK)
+                {
+
+                    return JsonConvert.DeserializeObject<Entidades.PersonaUsuario>(queryResult.Content);
+                }
+                else
+                {
+                    return null;
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
     }
 }

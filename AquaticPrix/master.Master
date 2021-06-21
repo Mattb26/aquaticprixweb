@@ -79,7 +79,7 @@
 
                     <li class="drop-down"><a href="">Mi Cuenta</a>
                         <ul>
-                            <li><a href="#">Iniciar sesión</a></li>
+                            <li><a href="Login.aspx">Iniciar sesión</a></li>
                             <li><a href="#altas">Crear una cuenta gratuita</a></li>
                         </ul>
                     </li>
@@ -402,23 +402,23 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="name">Nombre</label>
-                                    <input type="text" name="txtNombreContac" class="form-control" id="txtNombreContac" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required />
+                                    <input type="text" name="txtNombreContac" class="form-control" id="txtNombreContac" data-rule="minlen:4" data-msg="Please enter at least 4 chars" autocomplete="off" required />
                                     <div class="validate"></div>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="name">Correo-Electrónico</label>
-                                    <input type="email" class="form-control" name="txtemailContac" id="txtemailContac" data-rule="txtemailContac" data-msg="Please enter a valid email" required/>
+                                    <input type="email" class="form-control" name="txtemailContac" id="txtemailContac" data-rule="txtemailContac" data-msg="Please enter a valid email" autocomplete="off" required/>
                                     <div class="validate"></div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="name">Asunto</label>
-                                <input type="text" class="form-control" name="txtAsuntoContac" id="txtAsuntoContac" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required/>
+                                <input type="text" class="form-control" name="txtAsuntoContac" id="txtAsuntoContac" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" autocomplete="off" required/>
                                 <div class="validate"></div>
                             </div>
                             <div class="form-group">
                                 <label for="name">Mensaje</label>
-                                <textarea class="form-control" name="txtMsjContac" id="txtMsjContac" rows="10" data-rule="required" data-msg="Please write something for us"  required></textarea>
+                                <textarea class="form-control" name="txtMsjContac" id="txtMsjContac" rows="10" data-rule="required" data-msg="Please write something for us"  autocomplete="off" required></textarea>
                                 <div class="validate"></div>
                             </div>
                             <div class="mb-3">
@@ -427,7 +427,7 @@
                                 <div class="sent-message">Your message has been sent. Thank you!</div>
                             </div>
                             <div class="text-center">
-                                <button type="submit" onclick="AgregarContacto()">Enviar</button>
+                                <button type="submit" onclick="AgregarContacto(); return false">Enviar</button>
                             </div>
                         </form>
                     </div>
@@ -446,21 +446,21 @@
                     <p></p>
                 </div>
                 <div class="flex align-items-stretch">
-                    <form id="formAlta" class="formAlta" action="" method="post" role="form">
+                    <form id="formAlta" class="php-email-form" action="" method="post" role="form">
                         <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label for="name">Nombre</label>
-                                <input type="text" name="txtNombre" class="form-control" id="txtNombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars"  required/>
+                                <input type="text" name="txtNombre" class="form-control" id="txtNombre" data-rule="minlen:4" data-msg="Please enter at least 4 chars"  autocomplete="off" required/>
                                 <div class="validate"></div>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="name">Apellido</label>
-                                <input type="text" class="form-control" name="txtApellido" id="txtApellido" data-rule="minlen:4" data-msg="Please enter a valid email"  required/>
+                                <input type="text" class="form-control" name="txtApellido" id="txtApellido" data-rule="minlen:4" data-msg="Please enter a valid email"  autocomplete="off" required/>
                                 <div class="validate"></div>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="name">Fecha Nacimiento</label>
-                                <input type="date" class="form-control" name="txtFechaNacimiento" id="txtFechaNacimiento" data-rule="minlen:4" data-msg="Please enter a valid email" required />
+                                <input type="date" class="form-control" name="txtFechaNacimiento" id="txtFechaNacimiento" data-rule="minlen:4" data-msg="Please enter a valid email" autocomplete="off" required />
                                 <div class="validate"></div>
                             </div>
                         </div>
@@ -468,17 +468,17 @@
                         <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label for="name">Usuario</label>
-                                <input type="text" name="txtUsuario" class="form-control" id="txtUsuario" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required onblur="VerificarUsuario()" />
+                                <input type="text" name="txtUsuario" class="form-control" id="txtUsuario" data-rule="minlen:4" data-msg="Please enter at least 4 chars" autocomplete="off"  onblur="VerificarUsuario()" required />
                                 <div class="validate"></div>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="name">Clave</label>
-                                <input type="password" class="form-control" name="txtClave" id="txtClave" data-rule="minlen:4" data-msg="Please enter a valid email" required />
+                                <input type="password" class="form-control" name="txtClave" id="txtClave" data-rule="minlen:4" data-msg="Please enter a valid email" autocomplete="off" required />
                                 <div class="validate"></div>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="name">Correo electrónico</label>
-                                <input type="email" class="form-control" name="txtCorreo" id="txttxtCorreo" data-rule="minlen:4" data-msg="Please enter a valid email" required  onblur="VerificarCorreo()"/>
+                                <input type="email" class="form-control" name="txtCorreo" id="txttxtCorreo" data-rule="minlen:4" data-msg="Please enter a valid email" autocomplete="off"  onblur="VerificarCorreo()" required/>
                                 <div class="validate"></div>
                             </div>
                         </div>
@@ -486,7 +486,7 @@
                             <%--<button type="submit" onclick="AgregarUsuario()">Enviar</button>--%>
                         <%--</div>--%>
                         <div class="text-center">
-                            <button type="submit"  onclick="AgregarUsuario()">Enviar</button>
+                            <button type="submit"  onclick="AgregarUsuario(); return false">Enviar</button>
                         </div>
                     </form>
                 </div>
