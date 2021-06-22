@@ -30,6 +30,7 @@ namespace AquaticPrix
                     if (personaUsuario != null)
                     {
                         Session["usuario"] = personaUsuario;
+                        Response.Redirect("~/Default.aspx", false);
                     }
                     else 
                     {

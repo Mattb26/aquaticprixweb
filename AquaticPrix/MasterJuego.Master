@@ -9,7 +9,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <%--    Estillos--%>
-    <%--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">--%>
+        <%--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">--%>
 
     <link href="<%=ResolveUrl("~/css/font-awesome.min.css")%>" rel="stylesheet" type="text/css" />
 
@@ -55,8 +55,7 @@
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <%--<img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">--%>
-
-                                <img src="<%=ResolveUrl("~/dist/img/logo-granja-camila_58tnhjse.png")%>" class="user-image" alt="User Image" />
+                                                     <img src="<%=ResolveUrl("~/assets/img/logo.jpeg")%>" class="user-image" alt="User Image" />
 
 
                                 <span class="hidden-xs">
@@ -67,7 +66,7 @@
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header">
-                                    <img src="<%=ResolveUrl("~/dist/img/logo-granja-camila_ti7xblwy.png")%>" class="img-circle" alt="User Image" />
+                                    <img src="<%=ResolveUrl("~/assets/img/logo.jpeg")%>" class="img-circle" alt="User Image" />
 
                                     <p>
                                         <%--Alexander Pierce - Web Developer--%>
@@ -89,6 +88,7 @@
                                         <%--<a href="#" class="btn btn-default btn-flat">Sign out</a>--%>
                                         <%--<asp:Button ID="Button1" runat="server" Text="Sign out" CssClass="btn btn-default btn-flat"></asp:Button>--%>
                                         <input id="btnCerrarSession" type="button" value="Cerrar Sesion" class="btn btn-default btn-flat" runat="server" />
+                                       <%-- <asp:Button ID="btnCerrarSession" runat="server" Text="Cerrar Sesion" CssClass="btn btn-default btn-flat"/>--%>
                                     </div>
                                 </li>
                             </ul>
@@ -105,18 +105,63 @@
                 <div class="user-panel">
                     <div class="pull-left image">
                         <%--<img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">--%>
-                        <img src="<%=ResolveUrl("~/dist/img/logo-granja-camila_58tnhjse.png")%>" class="img-circle" alt="User Image" />
+                        <img src="<%=ResolveUrl("~/assets/img/logo.jpeg")%>" class="img-circle" alt="User Image" />
 
                     </div>
                     <div class="pull-left info" runat="server">
                         <p id="idmsj" runat="server">
                             <%-- <asp:Label ID="lblUsuarioNP" runat="server" Text="txt"></asp:Label>--%>
-                            <asp:Label ID="lblNP" runat="server" Text="label"></asp:Label>
+                            <asp:Label ID="lblNP" runat="server" Text=""></asp:Label>
                         </p>
                         <%--<a href="#"><i class="fa fa-circle text-success"></i> Online</a>--%>
                     </div>
                 </div>
                 <!-- search form -->
+                <ul class="sidebar-menu">
+                    <li class="header">Menu</li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="glyphicon glyphicon-shopping-cart"></i>
+                            <span>Comprar</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="<%=ResolveUrl("~/compra/Nuevo.aspx")%>"><i class="glyphicon glyphicon-plus"></i>Generar Orden</a></li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-circle-o"></i>
+                                    <span>Modificar</span>
+                                    <span class="pull-right-container">
+                                        <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li><a href="<%=ResolveUrl("~/Rol/Modificar.aspx")%>"><i class="fa fa-circle-o"></i>Permisos de Rol</a></li>
+                                    <li><a href="<%=ResolveUrl("~/Rol/Rol.aspx")%>"><i class="fa fa-circle-o"></i>Rol</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="glyphicon glyphicon-list-alt"></i>
+                                    <span>Listado</span>
+                                    <span class="pull-right-container">
+                                        <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li><a href="<%=ResolveUrl("~/compra/ListadoGeneral.aspx")%>"><i class="fa fa-circle-o"></i>General</a></li>
+                                    <li><a href="<%=ResolveUrl("~/compra/ListadoAutorizado.aspx")%>"><i class="fa fa-circle-o"></i>Autorizado</a></li>
+                                    <li><a href="<%=ResolveUrl("~/compra/ListadoPendiente.aspx")%>"><i class="fa fa-circle-o"></i>Pendiente</a></li>
+                                    <li><a href="<%=ResolveUrl("~/compra/ListadoRechazado.aspx")%>"><i class="fa fa-circle-o"></i>Rechazado</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="<%=ResolveUrl("~/compra/Autorizacion.aspx")%>"><i class="glyphicon glyphicon-ok"></i>Autorizacion</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
 
 
                 <!-- sidebar menu: : style can be found in sidebar.less -->

@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace AquaticPrix
 {
@@ -11,7 +6,29 @@ namespace AquaticPrix
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Entidades.PersonaUsuario personaUsuario;
+            try
+            {
+                if (!IsPostBack)
+                {
+                    personaUsuario = (Entidades.PersonaUsuario)(Session["usuario"]);
 
+                    if (personaUsuario != null)
+                    {
+                        lblUsuario.Text = personaUsuario.Usuario.NombreUsuario;
+                    }
+                    else 
+                    {
+                        Response.Redirect("~/NoAutorizado.aspx", false);
+                    }
+                    
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }
