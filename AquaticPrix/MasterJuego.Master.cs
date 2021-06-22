@@ -6,7 +6,10 @@ namespace AquaticPrix
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            btnCerrarSession.ServerClick += BtnCerrarSession_ServerClick;
+                
             Entidades.PersonaUsuario personaUsuario;
+            
             try
             {
                 if (!IsPostBack)
@@ -29,6 +32,12 @@ namespace AquaticPrix
 
                 throw;
             }
+        }
+
+        private void BtnCerrarSession_ServerClick(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("~/Index.aspx", false);
         }
     }
 }
