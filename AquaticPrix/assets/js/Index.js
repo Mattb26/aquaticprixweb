@@ -202,7 +202,7 @@ function VerificarCorreo() {
     return false;
 }
 function EstadoCorreo(response) {
-    if (response.d) {
+    if (!response.d) {
         $("input[ID$='txttxtCorreo']").val("");
         ErrorMensaje("El correo-electronico ingresado ya se encuentra registrado");
     }
