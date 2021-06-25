@@ -161,7 +161,7 @@ function VerificarUsuario() {
     return false;
 }
 function EstadoUsuario(response) {
-    if (response.d) {
+    if (!response.d) {
         $("input[ID$='txtUsuario']").val("");
         ErrorMensaje("El usuario agregado ya se encuentra registrado");
     }

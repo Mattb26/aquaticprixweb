@@ -16,14 +16,14 @@ namespace AquaticPrix
                 {
                     personaUsuario = (Entidades.PersonaUsuario)(Session["usuario"]);
 
-                    if (personaUsuario != null)
-                    {
-                        lblUsuario.Text = personaUsuario.Usuario.NombreUsuario;
-                    }
-                    else 
-                    {
-                        Response.Redirect("~/NoAutorizado.aspx", false);
-                    }
+                    //if (personaUsuario != null)
+                    //{
+                    //    lblUsuario.Text = personaUsuario.Usuario.NombreUsuario;
+                    //}
+                    //else 
+                    //{
+                    //    Response.Redirect("~/NoAutorizado.aspx", false);
+                    //}
                     
                 }
             }
