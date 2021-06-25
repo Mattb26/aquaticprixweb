@@ -72,6 +72,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Administracion\AgregarUsuario.aspx" />
     <Content Include="assets\css\Login.css" />
     <Content Include="assets\img\logo.jpeg" />
     <Content Include="assets\img\Mensaje\advertencia.png" />
@@ -161,6 +162,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administracion\AgregarUsuario.aspx.cs">
+      <DependentUpon>AgregarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\AgregarUsuario.aspx.designer.cs">
+      <DependentUpon>AgregarUsuario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -170,6 +178,7 @@
     </Compile>
     <Compile Include="Entidades\Contacto.cs" />
     <Compile Include="Entidades\Estadisticas.cs" />
+    <Compile Include="Entidades\Perfil.cs" />
     <Compile Include="Entidades\PersonaUsuario.cs" />
     <Compile Include="ListadoPuntos.aspx.cs">
       <DependentUpon>ListadoPuntos.aspx</DependentUpon>
@@ -192,6 +201,7 @@
     <Compile Include="MasterJuego.Master.designer.cs">
       <DependentUpon>MasterJuego.Master</DependentUpon>
     </Compile>
+    <Compile Include="Negocio\Combo.cs" />
     <Compile Include="Negocio\Contacto.cs" />
     <Compile Include="Negocio\Seguridad.cs" />
     <Compile Include="Negocio\Usuario.cs" />

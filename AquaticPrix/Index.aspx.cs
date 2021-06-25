@@ -30,6 +30,7 @@ namespace AquaticPrix
                 usuario.Usuario = new Entidades.Usuario();
                 usuario.Usuario.NombreUsuario = nick;
                 usuario.Usuario.Clave =  Seguridad.Encriptar(clave);
+                usuario.Usuario.Estado = 1;
                 usuario.CorreoElectronico = correo;
 
                 user = new Negocio.Usuario();
