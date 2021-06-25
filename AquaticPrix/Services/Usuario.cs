@@ -113,7 +113,7 @@ namespace AquaticPrix.Services
             try
             {
 
-                client = new RestClient(ConfigurationManager.AppSettings["URI_VERIFICARUSUARIO"]);
+                client = new RestClient(ConfigurationManager.AppSettings["URI_VERIFICARCUENTA"]);
                 client.AddDefaultHeader("Content-Type", "application/json");
 
                 request = new RestRequest(Method.GET);
