@@ -4,6 +4,8 @@
     <script src="<%=ResolveUrl("~/assets/js/Mensajes.js")%>"></script>  
     <script src="../Scripts/jquery-3.4.1.min.js"></script>
     <script src="../Scripts/bootstrap.js"></script>
+    <script src="../assets/js/administracion/AgregarUsuario.js"></script>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -42,8 +44,8 @@
                     <div class="form-group">
                         <label for="subject">
                             Correo Electronico</label>
-                        <input type="email" runat="server" id="txtCorreoElectronico" class="form-control" style="background-color: #F3F2D7"
-                            placeholder="Correo Electronico" oncut="return false" oncopy="return false" autocomplete="off" maxlength="100" />
+                        <input type="email" runat="server" id="txtCorreo" class="form-control" style="background-color: #F3F2D7" onblur="VerificarCorreo()"
+                            placeholder="Correo Electronico" oncut="return false" oncopy="return false" autocomplete="off" maxlength="100"  required="required" />
                     </div>
                 </div>
             </div>
@@ -53,8 +55,8 @@
                     <div class="form-group">
                         <label for="subject">
                             Usuario Login</label>
-                        <input type="text" runat="server" id="txtLogin" class="form-control"
-                            placeholder="Usuario Login" oncut="return false" oncopy="return false" autocomplete="off" maxlength="100" />
+                        <input type="text" runat="server" id="txtUsuario" class="form-control" onblur="VerificarUsuario()"
+                            placeholder="Usuario Login" oncut="return false" oncopy="return false" autocomplete="off" maxlength="100"  required="required" />
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -62,7 +64,7 @@
                         <label for="subject">
                             Clave</label>
                         <input type="password" runat="server" id="txtClave" class="form-control" style="background-color: #F3F2D7"
-                            placeholder="Clave" oncut="return false" oncopy="return false" autocomplete="off" maxlength="100" />
+                            placeholder="Clave" oncut="return false" oncopy="return false" autocomplete="off" maxlength="100"  required="required" />
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -108,7 +110,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="return false;">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="LimpiarTodo(); return false;">
                         Aceptar</button>
                 </div>
             </div>

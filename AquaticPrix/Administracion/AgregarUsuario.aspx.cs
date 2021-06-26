@@ -1,6 +1,7 @@
 ﻿using AquaticPrix.Negocio;
 using System;
 using System.Collections.Generic;
+using System.Web.Services;
 using System.Web.UI;
 
 namespace AquaticPrix.Administracion
@@ -57,11 +58,11 @@ namespace AquaticPrix.Administracion
                 personaUsuario = new Entidades.PersonaUsuario();
                 personaUsuario.Nombre = txtNombre.Value.Trim();
                 personaUsuario.Apellido = txtApellido.Value.Trim();
-                personaUsuario.CorreoElectronico = txtCorreoElectronico.Value.Trim();
+                personaUsuario.CorreoElectronico = txtCorreo.Value.Trim();
                 personaUsuario.FechaNacimiento = DateTime.Parse(txtFechaNacimiento.Value.Trim());
 
                 personaUsuario.Usuario = new Entidades.Usuario();
-                personaUsuario.Usuario.NombreUsuario = txtLogin.Value.Trim();
+                personaUsuario.Usuario.NombreUsuario = txtUsuario.Value.Trim();
                 personaUsuario.Usuario.Clave = Seguridad.Encriptar(txtClave.Value.Trim());
                 personaUsuario.Usuario.Estado = int.Parse(drpdPerfil.SelectedValue);
 
@@ -79,5 +80,42 @@ namespace AquaticPrix.Administracion
                 throw;
             }
         }
+
+        [WebMethod]
+        public static bool VerificarUsuario(string usuario)
+        {
+            Negocio.Usuario nick;
+            try
+            {
+                nick = new Negocio.Usuario();
+                return nick.Verificar(usuario);
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        [WebMethod]
+        public static bool VerificarCorreoElectronico(string mail)
+        {
+            Negocio.Usuario correo;
+            try
+            {
+                correo = new Negocio.Usuario();
+                return correo.VerificarCorreo(mail);
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
     }
 }
