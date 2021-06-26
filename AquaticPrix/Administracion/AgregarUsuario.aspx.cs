@@ -1,15 +1,24 @@
 ﻿using AquaticPrix.Negocio;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace AquaticPrix.Administracion
 {
     public partial class AgregarUsuario : System.Web.UI.Page
     {
+        private void MensajeCorrecto()
+        {
+            try
+            {
+                string script = "CorrectoMensaje();";
+                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "CorrectoMensaje1111", script, true);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -17,7 +26,8 @@ namespace AquaticPrix.Administracion
                 CargarDatos();
             }
         }
-        private void CargarDatos()
+
+         private void CargarDatos()
         {
             Negocio.Combo combo;
             try
@@ -57,7 +67,10 @@ namespace AquaticPrix.Administracion
 
                 usuarioAlta = new Usuario();
 
-                usuarioAlta.Agregar(personaUsuario);
+                if(usuarioAlta.Agregar(personaUsuario))
+                {
+                    MensajeCorrecto();
+                }
 
             }
             catch (Exception)

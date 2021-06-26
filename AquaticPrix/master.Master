@@ -624,7 +624,7 @@ Trabajamos para que cada cliente se lleve una experiencia única por lo que desa
                 </div>
                 <div class="modal-body">
                     <div class="col-md-12">
-                        <img id="imageID" align="right" src="../dist/img/signoInterrogacion.png" />
+                        <img id="imageID" align="right" src="assets/img/Mensaje/signoInterrogacion.png" />
                         <p id="lblMensajeUser">
                         </p>
                     </div>
