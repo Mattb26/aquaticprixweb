@@ -42,22 +42,22 @@ namespace AquaticPrix.Administracion
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtFechaNacimiento;
 
         /// <summary>
-        /// Control txtCorreoElectronico.
+        /// Control txtCorreo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtCorreoElectronico;
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtCorreo;
 
         /// <summary>
-        /// Control txtLogin.
+        /// Control txtUsuario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtLogin;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtUsuario;
 
         /// <summary>
         /// Control txtClave.

@@ -1,15 +1,25 @@
 ﻿using AquaticPrix.Negocio;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.Web.Services;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace AquaticPrix.Administracion
 {
     public partial class AgregarUsuario : System.Web.UI.Page
     {
+        private void MensajeCorrecto()
+        {
+            try
+            {
+                string script = "CorrectoMensaje();";
+                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "CorrectoMensaje1111", script, true);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -17,7 +27,8 @@ namespace AquaticPrix.Administracion
                 CargarDatos();
             }
         }
-        private void CargarDatos()
+
+         private void CargarDatos()
         {
             Negocio.Combo combo;
             try
@@ -47,17 +58,20 @@ namespace AquaticPrix.Administracion
                 personaUsuario = new Entidades.PersonaUsuario();
                 personaUsuario.Nombre = txtNombre.Value.Trim();
                 personaUsuario.Apellido = txtApellido.Value.Trim();
-                personaUsuario.CorreoElectronico = txtCorreoElectronico.Value.Trim();
+                personaUsuario.CorreoElectronico = txtCorreo.Value.Trim();
                 personaUsuario.FechaNacimiento = DateTime.Parse(txtFechaNacimiento.Value.Trim());
 
                 personaUsuario.Usuario = new Entidades.Usuario();
-                personaUsuario.Usuario.NombreUsuario = txtLogin.Value.Trim();
+                personaUsuario.Usuario.NombreUsuario = txtUsuario.Value.Trim();
                 personaUsuario.Usuario.Clave = Seguridad.Encriptar(txtClave.Value.Trim());
                 personaUsuario.Usuario.Estado = int.Parse(drpdPerfil.SelectedValue);
 
                 usuarioAlta = new Usuario();
 
-                usuarioAlta.Agregar(personaUsuario);
+                if(usuarioAlta.Agregar(personaUsuario))
+                {
+                    MensajeCorrecto();
+                }
 
             }
             catch (Exception)
@@ -66,5 +80,42 @@ namespace AquaticPrix.Administracion
                 throw;
             }
         }
+
+        [WebMethod]
+        public static bool VerificarUsuario(string usuario)
+        {
+            Negocio.Usuario nick;
+            try
+            {
+                nick = new Negocio.Usuario();
+                return nick.Verificar(usuario);
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        [WebMethod]
+        public static bool VerificarCorreoElectronico(string mail)
+        {
+            Negocio.Usuario correo;
+            try
+            {
+                correo = new Negocio.Usuario();
+                return correo.VerificarCorreo(mail);
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
     }
 }
