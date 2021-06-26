@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Administracion\AgregarUsuario.aspx" />
+    <Content Include="Administracion\Listado.aspx" />
     <Content Include="assets\css\Login.css" />
     <Content Include="assets\img\logo.jpeg" />
     <Content Include="assets\img\Mensaje\advertencia.png" />
@@ -172,6 +173,13 @@
     </Compile>
     <Compile Include="Administracion\AgregarUsuario.aspx.designer.cs">
       <DependentUpon>AgregarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Listado.aspx.cs">
+      <DependentUpon>Listado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Listado.aspx.designer.cs">
+      <DependentUpon>Listado.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
