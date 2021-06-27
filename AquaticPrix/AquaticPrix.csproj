@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Administracion\AgregarUsuario.aspx" />
+    <Content Include="Administracion\CambioClave.aspx" />
     <Content Include="Administracion\Listado.aspx" />
     <Content Include="assets\css\Login.css" />
     <Content Include="assets\img\logo.jpeg" />
@@ -164,6 +165,7 @@
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Usuario\Listado.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -173,6 +175,13 @@
     </Compile>
     <Compile Include="Administracion\AgregarUsuario.aspx.designer.cs">
       <DependentUpon>AgregarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\CambioClave.aspx.cs">
+      <DependentUpon>CambioClave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\CambioClave.aspx.designer.cs">
+      <DependentUpon>CambioClave.aspx</DependentUpon>
     </Compile>
     <Compile Include="Administracion\Listado.aspx.cs">
       <DependentUpon>Listado.aspx</DependentUpon>
@@ -227,6 +236,13 @@
     <Compile Include="Services\Contacto.cs" />
     <Compile Include="Services\Persona.cs" />
     <Compile Include="Services\Usuario.cs" />
+    <Compile Include="Usuario\Listado.aspx.cs">
+      <DependentUpon>Listado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuario\Listado.aspx.designer.cs">
+      <DependentUpon>Listado.aspx</DependentUpon>
+    </Compile>
     <Content Include="assets\css\style.css" />
     <Content Include="assets\img\apple-touch-icon.png" />
     <Content Include="assets\img\clients\client-1.png" />
