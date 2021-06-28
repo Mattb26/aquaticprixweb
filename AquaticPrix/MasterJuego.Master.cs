@@ -44,24 +44,22 @@ namespace AquaticPrix
         {
             try
             {
-                if (estado == 2 || estado == 3)
+
+                if (estado == 3)
                 {
-                    mnAdministracion.Visible = true;
-                    if (estado == 3)
-                    {
-                        mnAdministracionAgregar.Visible = true;
-                    }
-                    else 
-                    {
-                        mnAdministracionAgregar.Visible = false;
-                    }
-                    
+                    mnAdministracionAgregar.Visible = true;
                 }
-                else
+                else if (estado == 2)
                 {
-                    mnAdministracion.Visible = false;
+                    mnAdministracionAgregar.Visible = false;
                 }
-                
+                else 
+                {
+                    mnAdministracionAgregar.Visible = false;
+                    mnAdministracionListado.Visible = false;
+                    mnOperador.Visible = false;
+                }
+
             }
             catch (Exception)
             {

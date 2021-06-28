@@ -66,7 +66,7 @@ namespace AquaticPrix.Administracion
                 personaUsuario.Usuario.Clave = Seguridad.Encriptar(txtClave.Value.Trim());
                 personaUsuario.Usuario.Estado = int.Parse(drpdPerfil.SelectedValue);
 
-                usuarioAlta = new Usuario();
+                usuarioAlta = new Negocio.Usuario();
 
                 if(usuarioAlta.Agregar(personaUsuario))
                 {

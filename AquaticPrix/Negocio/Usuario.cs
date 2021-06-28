@@ -142,5 +142,22 @@ namespace AquaticPrix.Negocio
                 throw;
             }
         }
+
+        public bool CambioClave(Entidades.UsuarioClave usuarioClave) 
+        {
+            Services.Usuario usuario;
+            try
+            {
+                usuario = new Services.Usuario();
+
+                return usuario.CambioClave(usuarioClave);
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

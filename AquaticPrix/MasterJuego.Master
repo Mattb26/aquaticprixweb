@@ -125,7 +125,7 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li>
+                            <li id="mnOperador" runat="server">
                                 <a href="#">
                                     <i class="fa fa-circle-o"></i>
                                     <span>Operador</span>
@@ -144,7 +144,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li>
+                            <li  id="mnCambioClave" runat="server">
                                 <a href="<%=ResolveUrl("~/Administracion/CambioClave.aspx")%>">
                                     <i class="fa fa-circle-o"></i>
                                     <span>Cambio Clave</span>

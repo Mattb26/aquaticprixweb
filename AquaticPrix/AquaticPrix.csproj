@@ -89,7 +89,9 @@
     <Content Include="assets\img\team\Marco Antonio Miranda.jpeg" />
     <Content Include="assets\img\team\mattb26.jpeg" />
     <Content Include="assets\js\administracion\AgregarUsuario.js" />
+    <Content Include="assets\js\administracion\CambioClave.js" />
     <Content Include="assets\js\Index.js" />
+    <Content Include="assets\js\Login.js" />
     <Content Include="assets\js\Master.js" />
     <Content Include="assets\js\Mensajes.js" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -201,6 +203,7 @@
     <Compile Include="Entidades\Estadisticas.cs" />
     <Compile Include="Entidades\Perfil.cs" />
     <Compile Include="Entidades\PersonaUsuario.cs" />
+    <Compile Include="Entidades\UsuarioClave.cs" />
     <Compile Include="ListadoPuntos.aspx.cs">
       <DependentUpon>ListadoPuntos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

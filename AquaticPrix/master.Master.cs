@@ -12,7 +12,7 @@ namespace AquaticPrix
         }
 
         [WebMethod]
-        public static bool Alta(Usuario usuario)
+        public static bool Alta(Entidades.Usuario usuario)
         {
             try
             {

@@ -1,10 +1,23 @@
 ﻿using AquaticPrix.Negocio;
 using System;
+using System.Web.UI;
 
 namespace AquaticPrix
 {
     public partial class Login : System.Web.UI.Page
     {
+        private void MensajeError()
+        {
+            try
+            {
+                string script = "ErrorMensajes();";
+                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "ErrorMensajes1", script, true);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -34,7 +47,8 @@ namespace AquaticPrix
                     }
                     else 
                     {
-                        
+                        MensajeError();
+                        return;
                     }
                 }
 
