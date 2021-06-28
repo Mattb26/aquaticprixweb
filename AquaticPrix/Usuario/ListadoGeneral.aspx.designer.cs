@@ -11,7 +11,7 @@ namespace AquaticPrix.Usuario
 {
 
 
-    public partial class Listado
+    public partial class ListadoGeneral
     {
 
         /// <summary>

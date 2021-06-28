@@ -181,7 +181,7 @@
 
                                     </li>
                                     <li id="Li3" runat="server">
-                                        <a href="<%=ResolveUrl("~/Usuario/Listado.aspx")%>"><i class="fa fa-circle-o"></i>Listado General</a>
+                                        <a href="<%=ResolveUrl("~/Usuario/ListadoGeneral.aspx")%>"><i class="fa fa-circle-o"></i>Listado General</a>
 
                                     </li>
                                 </ul>

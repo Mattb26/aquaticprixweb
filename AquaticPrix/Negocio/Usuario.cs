@@ -159,5 +159,58 @@ namespace AquaticPrix.Negocio
                 throw;
             }
         }
+
+        public DataTable Estadisticas(Int32 idUsuario = 0)
+        {
+
+            Services.Usuario usuario;
+
+            try
+            {
+                usuario = new Services.Usuario();
+
+                IList<Entidades.Estadisticas> estadisticas = usuario.ListadoEstadisticas(idUsuario);
+
+                using (DataTable dt = new DataTable())
+                {
+                    dt.Columns.Add("nombreUsuario", typeof(string));
+                    dt.Columns.Add("posicion", typeof(string));
+                    dt.Columns.Add("perdido", typeof(string));
+                    dt.Columns.Add("promedioPartidas", typeof(string));
+                    dt.Columns.Add("bajas", typeof(string));
+                    dt.Columns.Add("caidas", typeof(string));
+                    dt.Columns.Add("promediobaja", typeof(string));
+                    dt.Columns.Add("promedioCaidas", typeof(string));
+                    dt.Columns.Add("fecha", typeof(string));
+
+                    if (estadisticas != null)
+                    {
+                        foreach (var item in estadisticas)
+                        {
+                            DataRow NewRow = dt.NewRow();
+                            NewRow["nombreUsuario"] = item.NombreUsuario;
+                            NewRow["posicion"] = item.Posicion;
+                            NewRow["perdido"] = item.Perdido;
+                            NewRow["promedioPartidas"] = item.PromedioPartidas;
+                            NewRow["bajas"] = item.Bajas;
+                            NewRow["promediobaja"] = item.Promediobaja;
+                            NewRow["caidas"] = item.Caidas;
+                            NewRow["promedioCaidas"] = item.PromedioCaidas;
+                            NewRow["fecha"] = Convert.ToDateTime(item.Fecha).ToString("dd/MM/yyyy");
+                            dt.Rows.Add(NewRow);
+                        }
+                    }
+
+                    return dt;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+                throw;
+            }
+
+        }
     }
 }

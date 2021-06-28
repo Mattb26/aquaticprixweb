@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterJuego.Master" AutoEventWireup="true" CodeBehind="Listado.aspx.cs" Inherits="AquaticPrix.Usuario.Listado" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterJuego.Master" AutoEventWireup="true" CodeBehind="ListadoGeneral.aspx.cs" Inherits="AquaticPrix.Usuario.ListadoGeneral" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>

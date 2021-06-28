@@ -168,6 +168,7 @@
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Usuario\Listado.aspx" />
+    <Content Include="Usuario\ListadoGeneral.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -245,6 +246,13 @@
     </Compile>
     <Compile Include="Usuario\Listado.aspx.designer.cs">
       <DependentUpon>Listado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\ListadoGeneral.aspx.cs">
+      <DependentUpon>ListadoGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuario\ListadoGeneral.aspx.designer.cs">
+      <DependentUpon>ListadoGeneral.aspx</DependentUpon>
     </Compile>
     <Content Include="assets\css\style.css" />
     <Content Include="assets\img\apple-touch-icon.png" />
