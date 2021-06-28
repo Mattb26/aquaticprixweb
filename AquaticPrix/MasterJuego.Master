@@ -28,7 +28,7 @@
     <script src="<%=ResolveUrl("~/Scripts/FuncionesEspeciales/ValidacionesGrl.js")%>"
         type="text/javascript"></script>
 
-    
+
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -112,48 +112,80 @@
                         </p>
                     </div>
                 </div>
+
                 <!-- search form -->
                 <ul class="sidebar-menu">
                     <li class="header">Menu</li>
-                    <li class="treeview">
+                    <li class="treeview" id="mnAdministracion" runat="server">
                         <a href="#">
-                            <i class="glyphicon glyphicon-shopping-cart"></i>
-                            <span>Puntajes</span>
+                            <i class="fa fa-circle-o"></i>
+                            <span>Administracion</span>
                             <span class="pull-right-container">
                                 <i class="fa fa-angle-left pull-right"></i>
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="<%=ResolveUrl("~/compra/Nuevo.aspx")%>"><i class="glyphicon glyphicon-plus"></i>Generar Orden</a></li>
-                            <li>
+                            <li id="mnOperador" runat="server">
                                 <a href="#">
                                     <i class="fa fa-circle-o"></i>
-                                    <span>Modificar</span>
+                                    <span>Operador</span>
                                     <span class="pull-right-container">
                                         <i class="fa fa-angle-left pull-right"></i>
                                     </span>
                                 </a>
                                 <ul class="treeview-menu">
-                                    <li><a href="<%=ResolveUrl("~/Rol/Modificar.aspx")%>"><i class="fa fa-circle-o"></i>Permisos de Rol</a></li>
-                                    <li><a href="<%=ResolveUrl("~/Rol/Rol.aspx")%>"><i class="fa fa-circle-o"></i>Rol</a></li>
+                                    <li id="mnAdministracionAgregar" runat="server">
+                                        <a href="<%=ResolveUrl("~/Administracion/AgregarUsuario.aspx")%>"><i class="fa fa-circle-o"></i>Agregar</a>
+
+                                    </li>
+                                    <li id="mnAdministracionListado" runat="server">
+                                        <a href="<%=ResolveUrl("~/Administracion/Listado.aspx")%>"><i class="fa fa-circle-o"></i>Listado</a>
+
+                                    </li>
                                 </ul>
                             </li>
+                            <li  id="mnCambioClave" runat="server">
+                                <a href="<%=ResolveUrl("~/Administracion/CambioClave.aspx")%>">
+                                    <i class="fa fa-circle-o"></i>
+                                    <span>Cambio Clave</span>
+                                    <span class="pull-right-container">
+                                        <i class="fa fa-angle-left pull-right"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+
+
+                    </li>
+
+                    <li class="treeview" id="Li1" runat="server">
+                        <a href="#">
+                            <i class="fa fa-circle-o"></i>
+                            <span>Puntos</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
                             <li>
                                 <a href="#">
-                                    <i class="glyphicon glyphicon-list-alt"></i>
+                                    <i class="fa fa-circle-o"></i>
                                     <span>Listado</span>
                                     <span class="pull-right-container">
                                         <i class="fa fa-angle-left pull-right"></i>
                                     </span>
                                 </a>
                                 <ul class="treeview-menu">
-                                    <li><a href="<%=ResolveUrl("~/compra/ListadoGeneral.aspx")%>"><i class="fa fa-circle-o"></i>General</a></li>
-                                    <li><a href="<%=ResolveUrl("~/compra/ListadoAutorizado.aspx")%>"><i class="fa fa-circle-o"></i>Autorizado</a></li>
-                                    <li><a href="<%=ResolveUrl("~/compra/ListadoPendiente.aspx")%>"><i class="fa fa-circle-o"></i>Pendiente</a></li>
-                                    <li><a href="<%=ResolveUrl("~/compra/ListadoRechazado.aspx")%>"><i class="fa fa-circle-o"></i>Rechazado</a></li>
+                                    <li id="Li2" runat="server">
+                                        <a href="<%=ResolveUrl("~/Usuario/Listado.aspx")%>"><i class="fa fa-circle-o"></i>Personal</a>
+
+                                    </li>
+                                    <li id="Li3" runat="server">
+                                        <a href="<%=ResolveUrl("~/Usuario/ListadoGeneral.aspx")%>"><i class="fa fa-circle-o"></i>Listado General</a>
+
+                                    </li>
                                 </ul>
                             </li>
-                            <li><a href="<%=ResolveUrl("~/compra/Autorizacion.aspx")%>"><i class="glyphicon glyphicon-ok"></i>Autorizacion</a></li>
                         </ul>
                     </li>
 
@@ -201,7 +233,5 @@
     <%--3--%>
     <script src="<%=ResolveUrl("~/dist/js/app.min.js")%>"></script>
     <%--4--%>
-
-
 </body>
 </html>

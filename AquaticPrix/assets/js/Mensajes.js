@@ -22,6 +22,7 @@ function ErrorMensaje(mensaje) {
     $("#imageID").attr('src', '../assets/img/Mensaje/advertencia.png');
 
     $("#myModal").modal("show");
+    return false;
 }
 
 function ErrorMensajeInsert(mensaje) {

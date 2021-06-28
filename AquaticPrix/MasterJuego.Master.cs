@@ -16,15 +16,16 @@ namespace AquaticPrix
                 {
                     personaUsuario = (Entidades.PersonaUsuario)(Session["usuario"]);
 
-                    //if (personaUsuario != null)
-                    //{
-                    //    lblUsuario.Text = personaUsuario.Usuario.NombreUsuario;
-                    //}
-                    //else 
-                    //{
-                    //    Response.Redirect("~/NoAutorizado.aspx", false);
-                    //}
-                    
+                    if (personaUsuario != null)
+                    {
+                        lblUsuario.Text = personaUsuario.Usuario.NombreUsuario;
+                        HabilitarMenu(personaUsuario.Usuario.Estado);
+                    }
+                    else
+                    {
+                        Response.Redirect("~/Login.aspx", false);
+                    }
+
                 }
             }
             catch (Exception)
@@ -38,6 +39,33 @@ namespace AquaticPrix
         {
             Session.Abandon();
             Response.Redirect("~/Index.aspx", false);
+        }
+        private void HabilitarMenu(int estado)
+        {
+            try
+            {
+
+                if (estado == 3)
+                {
+                    mnAdministracionAgregar.Visible = true;
+                }
+                else if (estado == 2)
+                {
+                    mnAdministracionAgregar.Visible = false;
+                }
+                else 
+                {
+                    mnAdministracionAgregar.Visible = false;
+                    mnAdministracionListado.Visible = false;
+                    mnOperador.Visible = false;
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }
