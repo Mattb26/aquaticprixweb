@@ -1,4 +1,4 @@
-﻿namespace AquaticPrix.Entidades
+﻿namespace Entidades
 {
     public class Estadisticas
     {

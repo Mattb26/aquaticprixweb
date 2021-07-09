@@ -1,9 +1,9 @@
-﻿using AquaticPrix.Entidades;
+﻿using Entidades;
 using System;
 using System.Collections.Generic;
 using System.Data;
 
-namespace AquaticPrix.Negocio
+namespace Negocio
 {
     public class Usuario
     {
@@ -24,7 +24,7 @@ namespace AquaticPrix.Negocio
         }
         public bool Verificar(string nick)
         {
-            Services.Usuario usuario ;
+            Services.Usuario usuario;
             try
             {
                 usuario = new Services.Usuario();
@@ -143,7 +143,7 @@ namespace AquaticPrix.Negocio
             }
         }
 
-        public bool CambioClave(Entidades.UsuarioClave usuarioClave) 
+        public bool CambioClave(Entidades.UsuarioClave usuarioClave)
         {
             Services.Usuario usuario;
             try

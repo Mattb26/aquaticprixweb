@@ -1,5 +1,5 @@
-﻿using AquaticPrix.Entidades;
-using AquaticPrix.Negocio;
+﻿using Entidades;
+using Negocio;
 using System;
 using System.Web.UI;
 

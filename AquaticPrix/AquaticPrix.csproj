@@ -46,12 +46,6 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="RestSharp, Version=106.11.7.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
-      <HintPath>..\packages\RestSharp.106.11.7\lib\net452\RestSharp.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -200,11 +194,6 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Entidades\Contacto.cs" />
-    <Compile Include="Entidades\Estadisticas.cs" />
-    <Compile Include="Entidades\Perfil.cs" />
-    <Compile Include="Entidades\PersonaUsuario.cs" />
-    <Compile Include="Entidades\UsuarioClave.cs" />
     <Compile Include="ListadoPuntos.aspx.cs">
       <DependentUpon>ListadoPuntos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -226,10 +215,6 @@
     <Compile Include="MasterJuego.Master.designer.cs">
       <DependentUpon>MasterJuego.Master</DependentUpon>
     </Compile>
-    <Compile Include="Negocio\Combo.cs" />
-    <Compile Include="Negocio\Contacto.cs" />
-    <Compile Include="Negocio\Seguridad.cs" />
-    <Compile Include="Negocio\Usuario.cs" />
     <Compile Include="NoAutorizado.aspx.cs">
       <DependentUpon>NoAutorizado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -237,9 +222,6 @@
     <Compile Include="NoAutorizado.aspx.designer.cs">
       <DependentUpon>NoAutorizado.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Services\Contacto.cs" />
-    <Compile Include="Services\Persona.cs" />
-    <Compile Include="Services\Usuario.cs" />
     <Compile Include="Usuario\Listado.aspx.cs">
       <DependentUpon>Listado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -324,8 +306,6 @@
     <Content Include="assets\vendor\venobox\venobox.min.css" />
     <Content Include="assets\vendor\venobox\venobox.min.js" />
     <Content Include="assets\vendor\waypoints\jquery.waypoints.min.js" />
-    <Compile Include="Entidades\Persona.cs" />
-    <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -378,7 +358,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{8bc24298-dccf-4372-bf98-a2e1a522cfd8}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{5bffef4d-2ea5-4f3e-9857-49b446e6042e}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

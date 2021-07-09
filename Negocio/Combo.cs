@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace AquaticPrix.Negocio
+namespace Negocio
 {
     public class Combo
     {

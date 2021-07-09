@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AquaticPrix.Entidades
+namespace Entidades
 {
     public class Persona
     {

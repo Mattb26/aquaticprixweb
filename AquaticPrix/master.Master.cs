@@ -1,4 +1,4 @@
-﻿using AquaticPrix.Entidades;
+﻿using Entidades;
 using System;
 using System.Web.Services;
 

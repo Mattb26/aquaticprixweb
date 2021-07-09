@@ -2,11 +2,11 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace AquaticPrix.Negocio
+namespace Negocio
 {
     public class Seguridad
     {
-        public static string Encriptar(string cadena, string firma= "AQUATIC-PRIX")
+        public static string Encriptar(string cadena, string firma = "AQUATIC-PRIX")
         {
 
             try

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AquaticPrix.Negocio
+namespace Negocio
 {
     public class Contacto
     {
