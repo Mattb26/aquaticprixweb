@@ -1,0 +1,38 @@
+﻿
+/*
+    Estilo para los textbox/type='text'
+*/
+input[type='text'] {
+    /*background-color: #FFFF99;*/
+    background-color: #F3F2D7;
+    color: #000000;
+    font-family: 'Arial';
+    font-size: 13px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+input[type='password'] {
+    /*background-color: #FFFF99;*/
+    background-color: #F3F2D7;
+    color: #000000;
+    font-family: 'Arial';
+    font-size: 13px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+input[disabled] {
+    background-color: #F0F0F0;
+}
+
+select {
+    /*background-color: #FFFF99;*/
+    background-color: #F3F2D7;
+    color: #000000;
+    font-family: 'Arial';
+    font-size: 13px;
+    font-style: normal;
+    font-weight: normal;
+}

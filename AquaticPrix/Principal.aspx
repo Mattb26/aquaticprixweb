@@ -74,7 +74,7 @@
                     <li class="drop-down"><a href="">Mi Cuenta</a>
                         <ul>
                             <li><a href="#">Iniciar sesión</a></li>
-                            <li><a href="#">Crear una cuenta gratuita</a></li>
+                            <li><a href="<%=ResolveUrl("~/Nuevo.aspx")%>">Crear una cuenta gratuita</a></li>
                         </ul>
                     </li>
 
