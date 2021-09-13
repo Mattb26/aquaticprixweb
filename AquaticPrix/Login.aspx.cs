@@ -1,4 +1,4 @@
-﻿using AquaticPrix.Negocio;
+﻿using Negocio;
 using System;
 using System.Web.UI;
 

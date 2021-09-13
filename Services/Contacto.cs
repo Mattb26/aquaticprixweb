@@ -4,7 +4,7 @@ using System;
 using System.Configuration;
 using System.Net;
 
-namespace AquaticPrix.Services
+namespace Services
 {
     public class Contacto
     {

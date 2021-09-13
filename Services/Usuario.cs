@@ -1,4 +1,4 @@
-﻿using AquaticPrix.Entidades;
+﻿using Entidades;
 using Newtonsoft.Json;
 using RestSharp;
 using System;
@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Net;
 
-namespace AquaticPrix.Services
+namespace Services
 {
     public class Usuario
     {
@@ -84,7 +84,8 @@ namespace AquaticPrix.Services
 
                     return false;
 
-                }else
+                }
+                else
                 {
 
                     return false;
