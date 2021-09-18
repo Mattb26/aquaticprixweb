@@ -257,3 +257,32 @@ function ValidarCorreo(valor) {
         return true;
     }
 }
+
+
+function Bajar() {
+
+    try {
+
+            $.ajax({
+                type: "POST",
+                url: 'Index.aspx/Descargar',
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: respuesta,
+                failure: function (response) {
+                    alert(response);
+                },
+                error: function (response) {
+                    alert(response);
+                }
+            });
+
+        }
+
+    } catch (e) {
+        console.log(e);
+        alert(e);
+}
+function respuesta(value) {
+
+}
