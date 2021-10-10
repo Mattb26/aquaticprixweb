@@ -32,7 +32,6 @@
 
     } catch (e) {
         console.log(e);
-        alert(e);
     }
 
 
@@ -98,7 +97,6 @@ function AgregarUsuario() {
 
     } catch (e) {
         console.log(e);
-        alert(e);
     }
 
 
@@ -154,7 +152,6 @@ function VerificarUsuario() {
 
     } catch (e) {
         console.log(e);
-        alert(e);
     }
 
 
@@ -195,7 +192,6 @@ function VerificarCorreo() {
 
     } catch (e) {
         console.log(e);
-        alert(e);
     }
 
 
@@ -256,4 +252,31 @@ function ValidarCorreo(valor) {
     else {
         return true;
     }
+}
+
+
+function Bajar() {
+
+    try {
+
+        $.ajax({
+            type: "POST",
+            url: 'Index.aspx/Descargar',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: respuesta,
+            failure: function (response) {
+                alert(response);
+            },
+            error: function (response) {
+                alert(response);
+            }
+        });
+
+    } catch (e) {
+        console.log(e);
+    }
+}
+function respuesta(value) {
+    console.log(value);
 }
